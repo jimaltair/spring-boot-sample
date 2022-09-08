@@ -1,19 +1,17 @@
 ### GET /say_hello
 
-GET http://localhost:8080/demo/say_hello?name=Stranger
+GET http://localhost:9000/demo/say_hello?name=Stranger
 
 ### GET /get_some_resource
 
-# curl --location --request GET 'http://localhost:8080/demo/get_some_resource?groups=6927463,6927464,6927467,6982355,6927465,7011073&student_id=777555999'
-#--header 'Auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c'
-#--header 'profile-id: 123456789'
-GET http://localhost:8080/demo/get_some_resource?groups=6927463,6927464,6927467,6982355,6927465,7011073&student_id=777555999
+GET http://localhost:9000/demo/get_some_resource?groups=6927463,6927464,6927467,6982355,6927465,7011073&student_id=777555999
 Auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
-profile-id: 123456789
+profile-id: 31799895
+profile: {"user_profile_id":"31799895", "type":"student"}
 
 ### GET swagger-ui
 
-GET http://localhost:8080/swagger-ui/index.html
+GET http://localhost:9000/swagger-ui/index.html
 
 
 

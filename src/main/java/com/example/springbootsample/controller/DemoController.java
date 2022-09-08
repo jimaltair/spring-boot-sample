@@ -23,7 +23,7 @@ public class DemoController {
     @RequestMapping(value = "/get_some_resource", method = RequestMethod.GET)
     @ApiResponses(value = {@ApiResponse(code = 422, message = "Have some problems")})
     @ApiOperation("Get some resource")
-    public MyComplexType getSomeResource(@ApiParam("Токен")
+    public MyComplexType getSomeResource(@ApiParam("Token")
                                          @RequestHeader(value="Auth-Token", required = false)
                                          String authToken,
 
@@ -36,7 +36,7 @@ public class DemoController {
                                          Long studentPid,
 
                                          @ApiParam("Profile of user")
-                                         @RequestHeader(value = "Profile", required = false)
+                                         @RequestHeader(value = "Profile")
                                          UserProfile user,
 
                                          @ApiParam("Array of group ids")
@@ -48,7 +48,7 @@ public class DemoController {
 
     @RequestMapping(value = "/say_hello", method = RequestMethod.GET)
     @ApiOperation("Say hello")
-    public Greeting sayHello(@RequestParam final String name) {
+    public Greeting sayHello(@ApiParam("User name") @RequestParam final String name) {
         return new Greeting("Hello " + name + "!");
     }
 }
