@@ -3,7 +3,7 @@ package com.example.springbootsample.models;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,19 +23,19 @@ public class UserProfile implements Serializable {
 
     private static final long serialVersionUID = 6804950387640328211L;
 
-    @ApiModelProperty(value = "ID")
+    @Schema(description = "ID")
     private Integer id;
-    @ApiModelProperty(value = "Original user ID")
+    @Schema(description = "Original user ID")
     private Integer originalUserId;
-    @ApiModelProperty(value = "User profile ID")
+    @Schema(description = "User profile ID")
     private Integer userProfileId;
-    @ApiModelProperty(value = "School ID")
+    @Schema(description = "School ID")
     private Integer schoolId;
-    @ApiModelProperty(value = "User profile type")
+    @Schema(description = "User profile type")
     private UserProfileType type;
-    @ApiModelProperty(value = "List of roles")
+    @Schema(description = "List of roles")
     private List<UserProfileRoleType> roles = new ArrayList<>();
-    @ApiModelProperty(value = "List of children")
+    @Schema(description = "List of children")
     private List<Child> children = new ArrayList<>();
 }
 

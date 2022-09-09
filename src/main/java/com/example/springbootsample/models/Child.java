@@ -1,20 +1,20 @@
 package com.example.springbootsample.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
 @JsonIgnoreProperties(ignoreUnknown = true)
+@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class Child {
-    @JsonProperty("profile_id")
+    @Schema(description = "Child profile ID")
     private Long profileId;
-    @JsonProperty("school_id")
     private Integer schoolId;
-    @JsonProperty("user_id")
     private Integer userId;
-    @JsonProperty("class_unit_id")
     private Integer classUnitId;
 }
