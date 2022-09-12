@@ -14,6 +14,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
+@Schema(name = "Answer from demo-controller") // replacing for @ApiModel
 public class MyComplexType {
 
     @Schema(description = "JWT Token")
