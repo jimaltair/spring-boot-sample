@@ -1,10 +1,12 @@
 ### GET /say_hello
 
 GET http://localhost:9000/demo/say_hello?name=Stranger
+accept: application/vnd.company.api-v1+json
 
 ### GET /get_some_resource
 
 GET http://localhost:9000/demo/get_some_resource?groups=6927463,6927464,6927467,6982355,6927465,7011073&student_id=777555999
+accept: application/vnd.company.api-v1+json
 Auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 profile-id: 31799895
 profile: {"user_profile_id":"31799895", "type":"student"}
